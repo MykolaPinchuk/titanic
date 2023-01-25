@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+  <head>
+    <title> Predict passenger survival on Titanic </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>    
+  </head>
+  <body>
+      <div class="container">
+        <div class="row my-5 pl-3">
+            <h1>Predict passenger survival on Titanic</h1>
+        </div>
+        <div class="form-container ">
+            <form class="form-horizontal" action = "/predict/" method="post">
+                <div class="form-group row">
+                  <label class="control-label col-sm-2" for="is_male">Is male? (Enter 1 or 0):</label>
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control" id="is_male" name="is_male">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="control-label col-sm-2" for="embC">Embarked in Cherbourg (Enter 1 or 0)</label>
+                  <div class="col-sm-4">          
+                    <input type="text" class="form-control" id="embC" name="embC">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="control-label col-sm-2" for="embQ">Embarked in Queenstown (Enter 1 or 0):</label>
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control" id="embQ" name="embQ">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="control-label col-sm-2" for="embS">Embarked in Sothampton (Enter 1 or 0):</label>
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control" id="embS" name="embS">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="control-label col-sm-2" for="mis_age">Age missing (Enter 1 or 0):</label>
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control" id="mis_age" name="mis_age">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="control-label col-sm-2" for="pclass">Passenger class (Enter 1, 2 or 3):</label>
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control" id="pclass" name="pclass">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="control-label col-sm-2" for="age">Age:</label>
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control" id="age" name="age">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="control-label col-sm-2" for="fare">Fare:</label>
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control" id="fare" name="fare">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="control-label col-sm-2" for="sibsp">Number of siblings on a ship:</label>
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control" id="sibsp" name="sibsp">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="control-label col-sm-2" for="parch">Number of parents and children on a ship:</label>
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control" id="parch" name="parch">
+                  </div>
+                </div>
+                <div class="form-group row"> 
+                <label class="control-label col-sm-2" for="">&nbsp;</label>                
+                  <div class="col-sm-offset-2 col-sm-4">
+                    <button type="submit" class="btn btn-primary">Predict</button>
+                  </div>
+                </div>
+              </form>
+            <!-- Ends form section -->
+        </div>
+    </div>
+  </body>
+</html>
