@@ -32,7 +32,13 @@ def predict():
                 Parch, 
                 Fare, 
                 Age2)
-            return render_template('predict.html', prediction = prediction)
+            if prediction == 1:
+                prediction_str = 'Survived'
+            elif prediction == 0:
+                prediction_str = 'Dead'
+            else:
+                prediction_str = 'Error'
+            return render_template('predict.html', prediction = prediction_str)
         except ValueError:
             return "Please Enter valid values"
         pass        
